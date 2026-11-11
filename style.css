@@ -1,0 +1,25 @@
+:root { color-scheme: light; --ink:#18352c; --paper:#f4f2e9; --accent:#14734c; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial, sans-serif; }
+a { color:inherit; text-decoration:none; }
+.topbar, footer { display:flex; justify-content:space-between; gap:1rem; padding:1.6rem 5vw; font-size:.7rem; font-weight:700; letter-spacing:.12em; }
+.topbar { border-bottom:1px solid #c8d1c5; }
+.topbar span { font-weight:400; }
+.intro { padding:8rem 5vw 6rem; }
+.eyebrow, .caption span { color:var(--accent); font-size:.7rem; font-weight:700; letter-spacing:.16em; }
+h1 { margin:2rem 0 3rem; font:normal clamp(4rem,10vw,10rem)/.87 Georgia,serif; letter-spacing:-.06em; }
+h1 em { color:var(--accent); font-weight:400; }
+.intro-bottom { display:flex; justify-content:space-between; align-items:end; gap:2rem; }
+.intro-bottom p { max-width:30rem; font-size:1.2rem; line-height:1.5; }
+.intro-bottom span { font-size:.65rem; line-height:1.8; letter-spacing:.12em; text-align:right; }
+.gallery { padding:0 5vw; }
+article { border-top:1px solid #9fb2a4; padding:2rem 0 5rem; }
+.caption { display:grid; grid-template-columns:1fr 2fr 2fr; gap:2rem; align-items:start; margin-bottom:2rem; }
+h2 { margin:0; font:normal clamp(2rem,3.5vw,3.5rem)/1 Georgia,serif; letter-spacing:-.04em; }
+.caption p { margin:0; max-width:30rem; line-height:1.6; font-size:.95rem; }
+article img { display:block; width:100%; height:auto; border:1px solid #c8d1c5; }
+aside { margin:2rem 5vw 6rem; padding:2rem 0; border-top:1px solid #9fb2a4; display:grid; grid-template-columns:1fr 2fr; gap:2rem; }
+aside p:last-child { margin:0; max-width:42rem; font:normal 1.3rem/1.5 Georgia,serif; }
+footer { background:var(--ink); color:var(--paper); }
+@media (max-width:700px) { .intro { padding:5rem 5vw; } .intro-bottom, .caption, aside { display:block; } .intro-bottom span { display:block; margin-top:2rem; text-align:left; } .caption h2 { margin:1rem 0; } .caption p { margin-bottom:1rem; } aside p:last-child { margin-top:1rem; } .topbar span { display:none; } }
