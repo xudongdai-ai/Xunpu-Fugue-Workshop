@@ -32,6 +32,8 @@ Open `index.html` in a browser to view the static gallery. No installation, serv
 
 - `index.html` and `style.css` — lightweight presentation code.
 - `assets/` — selected, unaltered project screenshots.
+- `src/meter.js` — the original standalone meter validation and tick conversion helper.
+- `src/engraving.css` — the original score-preview styling from the workshop interface. These two files are selected non-core excerpts, not a runnable application.
 - The original application, generation and analysis engines, private data, build artifacts and third-party software are intentionally not distributed here.
 
 ## Research status
