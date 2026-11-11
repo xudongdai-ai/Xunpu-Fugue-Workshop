@@ -1,0 +1,224 @@
+/* 暖纸色、深墨绿、朱红 配色方案与响应式布局 */
+:root {
+  --fs-bg: #f9f6f0;
+  --fs-card-bg: #fffefb;
+  --fs-border: #dcd4c5;
+  --fs-dark-green: #1a382b;
+  --fs-dark-green-hover: #264e3d;
+  --fs-vermilion: #c93b2b;
+  --fs-vermilion-hover: #b03224;
+  --fs-text: #2c2925;
+  --fs-text-muted: #736c62;
+  --fs-active-block: #e8a87c;
+  --fs-focus-ring: #c93b2b;
+}
+
+#scheme-workbench {
+  background: var(--fs-bg);
+  color: var(--fs-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fs-card {
+  background: var(--fs-card-bg);
+  border: 1px solid var(--fs-border);
+  border-radius: 6px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.fs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.fs-title {
+  color: var(--fs-dark-green);
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fs-badge {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #eee;
+  color: #666;
+}
+.fs-badge.dirty {
+  background: var(--fs-vermilion);
+  color: #fff;
+}
+.fs-badge.synced {
+  background: var(--fs-dark-green);
+  color: #fff;
+}
+
+.fs-btn {
+  background: var(--fs-dark-green);
+  color: #fff;
+  border: 1px solid var(--fs-dark-green);
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.15s, opacity 0.15s;
+}
+.fs-btn:hover {
+  background: var(--fs-dark-green-hover);
+}
+.fs-btn:focus-visible {
+  outline: 2px solid var(--fs-focus-ring);
+  outline-offset: 1px;
+}
+.fs-btn.danger {
+  background: var(--fs-vermilion);
+  border-color: var(--fs-vermilion);
+}
+.fs-btn.danger:hover {
+  background: var(--fs-vermilion-hover);
+}
+.fs-btn.secondary {
+  background: transparent;
+  color: var(--fs-dark-green);
+  border-color: var(--fs-dark-green);
+}
+.fs-btn.secondary:hover {
+  background: rgba(26, 56, 43, 0.08);
+}
+
+.fs-input, .fs-select {
+  border: 1px solid var(--fs-border);
+  background: #fff;
+  color: var(--fs-text);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 0.9rem;
+}
+.fs-input:focus, .fs-select:focus {
+  outline: 2px solid var(--fs-focus-ring);
+  border-color: var(--fs-vermilion);
+}
+
+.fs-grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.fs-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fs-field label {
+  font-size: 0.8rem;
+  color: var(--fs-text-muted);
+}
+
+.fs-section-list, .fs-entry-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.fs-item-pill {
+  border: 1px solid var(--fs-border);
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: #fff;
+}
+.fs-item-pill.active {
+  background: var(--fs-dark-green);
+  color: #fff;
+  border-color: var(--fs-dark-green);
+}
+
+.fs-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #f0ebe1;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  border: 1px solid var(--fs-border);
+}
+.fs-track-row {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  position: relative;
+  background: rgba(255,255,255,0.6);
+  border-radius: 3px;
+  margin-bottom: 2px;
+}
+.fs-track-label {
+  width: 50px;
+  font-size: 0.75rem;
+  padding-left: 6px;
+  font-weight: bold;
+  color: var(--fs-dark-green);
+  flex-shrink: 0;
+}
+.fs-track-blocks {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+}
+.fs-block {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  background: var(--fs-dark-green);
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 4px;
+  cursor: pointer;
+  user-select: none;
+}
+.fs-block.selected {
+  outline: 2px solid var(--fs-vermilion);
+  background: var(--fs-dark-green-hover);
+}
+.fs-block.playing {
+  background: var(--fs-vermilion) !important;
+}
+.fs-playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--fs-vermilion);
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  #scheme-workbench {
+    padding: 8px;
+    gap: 10px;
+  }
+  .fs-grid-form {
+    grid-template-columns: 1fr;
+  }
+}

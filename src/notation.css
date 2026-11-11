@@ -1,0 +1,87 @@
+/* notation.css - 五线谱与工作台样式 */
+#notation-workbench {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #222;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+#notation-workbench * {
+  box-sizing: border-box;
+}
+.nw-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.nw-toolbar button {
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.nw-toolbar button:hover {
+  background: #f0f0f0;
+}
+.nw-legend {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  margin-left: auto;
+  align-items: center;
+}
+.nw-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.nw-legend-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.nw-score-view {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.nw-svg {
+  display: block;
+  user-select: none;
+}
+.nw-note-head {
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+.nw-note-head:hover {
+  opacity: 0.8;
+}
+.nw-note-head.selected {
+  stroke: #ff3b30 !important;
+  stroke-width: 2px;
+}
+.nw-note-head.edited {
+  stroke-dasharray: 2,1;
+}
+.nw-playhead {
+  stroke: #ff9500;
+  stroke-width: 2;
+  pointer-events: none;
+}
+.nw-meta {
+  font-size: 12px;
+  color: #555;
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+}

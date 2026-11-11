@@ -33,7 +33,11 @@ Open `index.html` in a browser to view the static gallery. No installation, serv
 - `index.html` and `style.css` — lightweight presentation code.
 - `assets/` — selected, unaltered project screenshots.
 - `src/meter.js` — the original standalone meter validation and tick conversion helper.
-- `src/engraving.css` — the original score-preview styling from the workshop interface. These two files are selected non-core excerpts, not a runnable application.
+- `src/engraving.css`, `notation.css`, `scheme.css`, and `workshop.css` — original presentation styles for the score and workshop interface.
+- `src/timeline-ui.js` — interface code for editing score-change events.
+- `src/cap-file-ui.js` — file interaction and input checks for score import/export.
+
+These selected non-core excerpts come from the development prototype. Some refer to internal modules and libraries that are not published here, so they are provided for reading and are not a standalone application.
 - The original application, generation and analysis engines, private data, build artifacts and third-party software are intentionally not distributed here.
 
 ## Research status
